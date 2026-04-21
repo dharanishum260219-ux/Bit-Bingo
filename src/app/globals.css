@@ -1,0 +1,57 @@
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "tailwindcss";
+
+:root {
+  --font-display: "Space Grotesk";
+  --font-mono: "JetBrains Mono";
+  --bg: #0b1021;
+  --panel: #0f172a;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  --accent-2: #22d3ee;
+  --danger: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-panel: var(--panel);
+  --color-foreground: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(1px 1px at 10px 10px, #1f2937 1px, transparent 0),
+    radial-gradient(1px 1px at 30px 30px, #111827 1px, transparent 0);
+  background-size: 120px 120px;
+  color: var(--ink);
+  font-family: var(--font-display), system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--accent-2);
+}
+
+::selection {
+  background: #22c55e40;
+  color: var(--ink);
+}
+
+code,
+pre {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
